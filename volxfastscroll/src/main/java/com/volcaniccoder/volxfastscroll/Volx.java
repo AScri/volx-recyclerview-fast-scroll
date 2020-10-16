@@ -29,6 +29,7 @@ public class Volx implements Runnable {
 
     public static final int FIT_NICELY = 0;
     public static final int NEVER_CLOSE = -1;
+    public static final int NEVER_CLOSE_BY_TOUCH = -2;
     private Context context;
     private int activeColor;
     private int backgroundColor;
@@ -247,8 +248,8 @@ public class Volx implements Runnable {
     private void setViewsVisibility(boolean isShow) {
         if (!isShow) {
             middleText.setVisibility(View.GONE);
-//            if (delayMillis == NEVER_CLOSE)
-//                return;
+            if (delayMillis == NEVER_CLOSE)
+                return;
             rightIndicatorLayout.setVisibility(View.GONE);
             isUserScrolled = false;
             isUserTouchedRightBar = false;
@@ -316,7 +317,7 @@ public class Volx implements Runnable {
             @Override
             public void run() {
                 if (isUserTouchedRightBar) return;
-                if (rightIndicatorLayout.getVisibility() == VISIBLE) {
+                if (rightIndicatorLayout.getVisibility() == VISIBLE && delayMillis != NEVER_CLOSE_BY_TOUCH) {
                     setViewsVisibility(false);
                 }
                 mRecyclerView.removeCallbacks(this);
