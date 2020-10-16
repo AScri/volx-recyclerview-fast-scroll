@@ -230,7 +230,9 @@ public class Volx implements Runnable {
                             ((VolxAdapter) mAdapter).clearBlinks();
                             mAdapter.notifyDataSetChanged();
                             lastPos = -1;
-                            setViewsVisibility(false);
+                            if (delayMillis != NEVER_CLOSE_BY_TOUCH) {
+                                setViewsVisibility(false);
+                            }
                         }
                         break;
                 }
