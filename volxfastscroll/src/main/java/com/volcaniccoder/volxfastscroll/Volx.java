@@ -152,6 +152,8 @@ public class Volx implements Runnable {
             }
         });
 
+        userRecyclerView.removeOnScrollListener(scrollListener);
+
         scrollListener = new RecyclerView.OnScrollListener() {
             @Override
             public void onScrollStateChanged(RecyclerView recyclerView, int newState) {
@@ -174,7 +176,7 @@ public class Volx implements Runnable {
         };
 
         userRecyclerView.addOnScrollListener(scrollListener);
-
+        mRecyclerView.clearOnScrollListeners();
         mRecyclerView.addOnScrollListener(new RecyclerView.OnScrollListener() {
             @Override
             public void onScrollStateChanged(RecyclerView recyclerView, int newState) {
