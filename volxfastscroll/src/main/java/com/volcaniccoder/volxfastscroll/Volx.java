@@ -247,8 +247,8 @@ public class Volx implements Runnable {
     private void setViewsVisibility(boolean isShow) {
         if (!isShow) {
             middleText.setVisibility(View.GONE);
-            if (delayMillis == NEVER_CLOSE)
-                return;
+//            if (delayMillis == NEVER_CLOSE)
+//                return;
             rightIndicatorLayout.setVisibility(View.GONE);
             isUserScrolled = false;
             isUserTouchedRightBar = false;
