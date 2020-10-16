@@ -415,10 +415,25 @@ public class Volx implements Runnable {
         if (state) {
             setViewsVisibility(false);
             userRecyclerView.removeOnScrollListener(scrollListener);
+            userRecyclerView.clearOnScrollListeners();
+            mRecyclerView.clearOnScrollListeners();
             return;
         }
         userRecyclerView.addOnScrollListener(scrollListener);
+        mRecyclerView.addOnScrollListener(new RecyclerView.OnScrollListener() {
+            @Override
+            public void onScrollStateChanged(RecyclerView recyclerView, int newState) {
+                super.onScrollStateChanged(recyclerView, newState);
 
+                if (middleText.getVisibility() != VISIBLE)
+                    middleText.setVisibility(View.VISIBLE);
+
+                if (newState == SCROLL_STATE_IDLE)
+                    rightIndicatorLayout.setVisibility(View.VISIBLE);
+
+            }
+
+        });
     }
 
     public static class Builder {
