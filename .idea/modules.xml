@@ -4,6 +4,9 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/VolxFastScrollSample.iml" filepath="$PROJECT_DIR$/VolxFastScrollSample.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/volx-recyclerview-fast-scroll.iml" filepath="$PROJECT_DIR$/.idea/modules/volx-recyclerview-fast-scroll.iml" group="volx-recyclerview-fast-scroll" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/volx-recyclerview-fast-scroll-app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/volx-recyclerview-fast-scroll-app.iml" group="volx-recyclerview-fast-scroll/app" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/volxfastscroll/volx-recyclerview-fast-scroll-volxfastscroll.iml" filepath="$PROJECT_DIR$/.idea/modules/volxfastscroll/volx-recyclerview-fast-scroll-volxfastscroll.iml" group="volx-recyclerview-fast-scroll/volxfastscroll" />
       <module fileurl="file://$PROJECT_DIR$/volxfastscroll/volxfastscroll.iml" filepath="$PROJECT_DIR$/volxfastscroll/volxfastscroll.iml" />
     </modules>
   </component>
